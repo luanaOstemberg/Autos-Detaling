@@ -1,0 +1,39 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(fondo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1 img {
+    vertical-align: middle;
+margin: 10px;
+}
+
+#auto-baner {
+    background-image: url(auto-baner.webp);
+    background-size: cover;
+    background-position: center;
+    color: black;
+    padding: 10px;
+    margin: 5px;
+}
+
+.align-items-start {
+list-style-type: none; }
+
+.col {
+    margin: 10px;
+    padding: 2px;
+ }
