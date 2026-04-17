@@ -1,47 +1,83 @@
 <!DOCTYPE html>
-<html lang="es"> 
-    <head>
-        <link rel="stylesheet" href="../css/style.css">
-        <title>Galeria</title>
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1" >
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></head>
+<html lang="es">
 
-<body> 
-    <header id="auto-baner"> 
-        <nav>
-            <div class="container text-center">
-            <ul class="row align-items-start">
-                <li class="col"><a href="../index.html" type="button" class="btn btn-secondary">Home</a></li>
-                <li class="col"><a href="servicios.html" type="button" class="btn btn-secondary">Servicios</a></li> 
-                <li class="col"><a href="galeria.html" type="button" class="btn btn-secondary">Galeria</a></li>
-                <li class="col"><a href="contacto.html" type="button" class="btn btn-secondary">Contacto</a></li>
-        </ul>
-            </div>   
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Galeria</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="auto-baner">
+        <nav class="row">
+            <div class="col">
+                <h1><img src="https://dummyimage.com/100x100/fff/fff" alt="logo" width="80">Servicios</h1>
+            </div>
+            <div class="col">
+                <ul class="row align-items-start">
+                    <li class="col"><a href="../index.html" type="button" class="btn btn-secondary">Home</a></li>
+                    <li class="col"><a href="servicios.html" type="button" class="btn btn-secondary">Servicios</a></li>
+                    <li class="col"><a href="galeria.html" type="button" class="btn btn-secondary">Galeria</a></li>
+                    <li class="col"><a href="contacto.html" type="button" class="btn btn-secondary">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
-        <h1><img src="https://dummyimage.com/100x100/000/fff" alt="logo" width="80">Galeria</h1>
-        
-        </header>
+
+
+    </header>
     <main>
         <section class="servicios">
-<h2>Nuestros servicios</h2>
-<div class="Cards">
-<div class="Card">
-    <h3>Lavado Completo</h3>
-    <p>Limpieza exterior e interior básica del vehículo</p>
-    </div>
-</div>
+            <h2>Nuestras Fotos</h2>
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://dummyimage.com/600x400/fff/000000" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://dummyimage.com/600x400/fff/000000" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://dummyimage.com/600x400/fff/000000" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section>
     </main>
-    <footer> 
+    <footer>
         <h4>
             fin de página
         </h4>
 
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

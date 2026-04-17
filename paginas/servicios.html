@@ -17,8 +17,11 @@
 
 <body>
     <header id="auto-baner">
-        <nav>
-            <div class="container text-center">
+        <nav class="row">
+            <div class="col">
+                <h1><img src="https://dummyimage.com/100x100/fff/000000" alt="logo" width="80">Servicios</h1>
+            </div>
+            <div class="col">
                 <ul class="row align-items-start">
                     <li class="col"><a href="../index.html" type="button" class="btn btn-secondary">Home</a></li>
                     <li class="col"><a href="servicios.html" type="button" class="btn btn-secondary">Servicios</a></li>
@@ -27,35 +30,75 @@
                 </ul>
             </div>
         </nav>
-        <h1><img src="https://dummyimage.com/100x100/000/fff" alt="logo" width="80">Servicios</h1>
+
 
     </header>
     <main>
         <section class="servicios">
             <h2>Nuestros servicios</h2>
-            <div class="Cards">
-                <div class="Card">
-                    <h3>Limpieza de interiores</h3>
-                    <p>Eliminación de suciedad, manchas y malos olores</p>
-                    <ul>
-                        <li>Lavado básico: <p>limpieza exterior y aspirado general para mantener el auto en buen estado
-                            </p>
+            <div class="card">
+                <div class="card">
+                    <div id="linea1">
+                        <h3>Limpieza de interiores</h3>
+                        <p>Eliminación de suciedad, manchas y malos olores</p>
+                    </div>
+                    <ul id="grilla-servicios">
+                        <li class="card" style="width: 18rem;">
+                            <img src="../img/limpieza_basica.jpg" class="card-img-top" alt="Lavado básico">
+                            <div class="card-body">
+                                <h4 class="card-title">Lavado básico: </h4>
+                                <p class="card-text">limpieza exterior y aspirado general para mantener el auto en buen
+                                    estado
+                                </p>
+                            </div>
                         </li>
-                        <li>Limpieza de Interior intermedio: <p>incluye lavado completo más una limpieza más detallada
-                                del interior y baúl.</p>
+                        <li class="card" style="width: 18rem;">
+                            <img src="../img/limpieza_intermedia.webp" class="card-img-top" alt="Limpieza de interior">
+                            <div class="card-body">
+                                <h4 class="card-title">Limpieza de Interior intermedio: </h4>
+                                <p class="card-text">incluye lavado completo más una limpieza más detallada
+                                    del interior y baúl.</p>
+                            </div>
                         </li>
-                        <li>Limpieza premium<p>servicio completo con limpieza profunda, detalles finos, encerado y
-                                terminaciones que dejan el
-                                auto como nuevo</p>
+                        <li class="card" style="width: 18rem;">
+                            <img src="../img/limpieza_premium.webp" class="card-img-top" alt="Limpieza premium">
+                            <div class="card-body">
+                                <h4 class="card-title">Limpieza premium: </h4>
+                                <p class="card-text">servicio completo con limpieza profunda, detalles finos, encerado y
+                                    terminaciones que dejan el
+                                    auto como nuevo</p>
+                            </div>
                         </li>
                     </ul>
-
-                    <h3>Polarizados</h3>
-                    <p>contamos con distintos tonos que mejoran la estética y brindan mayor privacidad.</p>
-                    <h3>Chapa y Pintura</h3>
-                    <p>reparación de golpes, rayones y renovación completa del color.</p>
-                    <h3>Pulido y encerado</h3>
-                    <p>recupera el brillo original y protege la pintura.</p>
+                </div>
+                <div>
+                    <div id="linea1">
+                        <h3>Trabajos Adicionales</h3>
+                        <p>Estetica</p>
+                    </div>
+                    <ul id="grilla-servicios">
+                        <li class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="../img/polarizados_autos.webp" class="card-img-top" alt="Lavado básico">
+                            <div class="card-body">
+                                <h4 class="card-title">Polarizados</h4>
+                                <p class="card-text" >contamos con distintos tonos que mejoran la estética y brindan mayor privacidad.</p>
+                            </div>
+                        </li>
+                        <li class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="../img/chapa_y_pintura.webp" class="card-img-top" alt="Lavado básico">
+                            <div class="card-body">
+                                <h4 class="card-title">Chapa y Pintura</h4>
+                                <p class="card-text" >reparación de golpes, rayones y renovación completa del color.</p>
+                            </div>
+                        </li>
+                        <li class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="../img/pulido.webp" class="card-img-top" alt="Lavado básico">
+                            <div class="card-body">
+                                <h4 class="card-title">Pulido y encerado</h4>
+                                <p class="card-text">recupera el brillo original y protege la pintura.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
