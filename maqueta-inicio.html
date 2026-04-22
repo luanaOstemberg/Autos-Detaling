@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maqueta – Autos Detaling</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f3ee;
+    --accent: #c9a84c;
+    --accent-dim: #8a6e2f;
+    --gray: #2a2a2a;
+    --gray-mid: #444;
+    --gray-light: #888;
+  }
+
+  body {
+    background: #1a1a1a;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 16px;
+  }
+
+  .label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #666;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* ── FRAME ── */
+  .frame {
+    width: 100%;
+    max-width: 960px;
+    background: var(--black);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    height: 520px;
+    background: linear-gradient(160deg, #111 0%, #1c1a14 60%, #0a0a0a 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 70% at 80% 50%, rgba(201,168,76,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 60%);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* NAV */
+  .nav {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 36px;
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: #000;
+    letter-spacing: 0.05em;
+  }
+
+  .logo-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.12em;
+    color: var(--white);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .nav-links li a {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--gray-light);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .nav-links li a.active {
+    color: var(--accent);
+  }
+
+  .nav-cta {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  /* HERO CONTENT */
+  .hero-body {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 36px;
+    gap: 20px;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .hero-tag::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 88px;
+    line-height: 0.9;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    max-width: 580px;
+  }
+
+  .hero-title span {
+    color: var(--accent);
+    display: block;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    color: var(--gray-light);
+    max-width: 400px;
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #000;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: none;
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--white);
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  /* HERO BADGE */
+  .hero-badge {
+    position: absolute;
+    right: 36px;
+    bottom: 40px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .badge-circle {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .badge-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .badge-txt {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-light);
+    text-align: center;
+  }
+
+  /* STATS BAR */
+  .stats-bar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    border-top: 1px solid rgba(201,168,76,0.1);
+  }
+
+  .stat {
+    flex: 1;
+    padding: 18px 24px;
+    border-right: 1px solid rgba(201,168,76,0.1);
+  }
+
+  .stat:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--gray-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  /* ── SERVICES ── */
+  .section {
+    padding: 52px 36px;
+    background: var(--black);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  .section-tag {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .see-all {
+    font-size: 12px;
+    color: var(--gray-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+    padding-bottom: 2px;
+    color: var(--accent);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .service-card {
+    background: var(--gray);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #333;
+  }
+
+  .card-img {
+    height: 140px;
+    background: #333;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-img.detailing { background: linear-gradient(135deg, #1a1a1a, #2d2a1e); }
+  .card-img.chapa { background: linear-gradient(135deg, #1a1814, #2a2218); }
+  .card-img.pulido { background: linear-gradient(135deg, #141a1a, #1a2828); }
+
+  .card-icon {
+    font-size: 40px;
+    opacity: 0.6;
+  }
+
+  .card-body { padding: 18px; }
+
+  .card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .card-desc {
+    font-size: 13px;
+    color: var(--gray-light);
+    line-height: 1.55;
+    font-weight: 300;
+  }
+
+  .card-tag {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+
+  /* ── GALLERY STRIP ── */
+  .gallery-strip {
+    padding: 0 36px 52px;
+    background: var(--black);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+    height: 220px;
+  }
+
+  .gallery-item {
+    border-radius: 8px;
+    background: #222;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #555;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.6) 100%);
+  }
+
+  .gallery-item.main { background: linear-gradient(135deg, #1e1a10, #2e2416); }
+  .gallery-item.b { background: linear-gradient(135deg, #101e1a, #142018); }
+  .gallery-item.c { background: linear-gradient(135deg, #1a1014, #201018); }
+
+  /* ── ABOUT ── */
+  .about {
+    padding: 52px 36px;
+    background: #0e0e0e;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    border-top: 1px solid #1e1e1e;
+  }
+
+  .about-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .about-title span { color: var(--accent); }
+
+  .about-text {
+    font-size: 14px;
+    color: var(--gray-light);
+    line-height: 1.75;
+    font-weight: 300;
+    margin-bottom: 24px;
+  }
+
+  .about-img {
+    height: 260px;
+    background: linear-gradient(135deg, #1c1a12, #2a2416);
+    border-radius: 10px;
+    border: 1px solid #2a2418;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #555;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 28px 36px;
+    background: #050505;
+    border-top: 1px solid #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: #555;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+  }
+
+  .footer-copy {
+    font-size: 11px;
+    color: #444;
+    letter-spacing: 0.06em;
+  }
+
+  /* ANNOTATION LAYER */
+  .annotations {
+    width: 100%;
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .ann {
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+
+  .ann-title {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  .ann-desc {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<p class="label">Maqueta · Autos Detaling · Página de Inicio</p>
+
+<div class="frame">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+
+    <nav class="nav">
+      <div class="nav-logo">
+        <div class="logo-box">AD</div>
+        <span class="logo-text">Autos Detaling</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Galería</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <button class="nav-cta">Contactar</button>
+    </nav>
+
+    <div class="hero-body">
+      <span class="hero-tag">Estética automotriz profesional</span>
+      <h1 class="hero-title">Tu auto,<span>impecable.</span></h1>
+      <p class="hero-sub">Detailing, chapa y pintura con precisión artesanal. Cada vehículo tratado como si fuera propio.</p>
+      <div class="hero-actions">
+        <button class="btn-primary">Ver servicios</button>
+        <button class="btn-ghost">Galería de trabajos</button>
+      </div>
+    </div>
+
+    <div class="hero-badge">
+      <div class="badge-circle">
+        <span class="badge-num">5★</span>
+        <span class="badge-txt">Calidad<br>garantizada</span>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="stat-num">+200</div>
+        <div class="stat-label">Autos trabajados</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Años de experiencia</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Clientes satisfechos</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Especialidades</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="section">
+    <div class="section-header">
+      <div>
+        <div class="section-tag">Lo que hacemos</div>
+        <div class="section-title">Nuestros servicios</div>
+      </div>
+      <a href="#" class="see-all">Ver todos →</a>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="card-img detailing">
+          <span class="card-icon">✨</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Detailing completo</div>
+          <div class="card-desc">Pulido, encerado y limpieza profunda interior/exterior. Brillo showroom garantizado.</div>
+          <span class="card-tag">Estética</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="card-img chapa">
+          <span class="card-icon">🎨</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Chapa y pintura</div>
+          <div class="card-desc">Reparación de abolladuras y trabajos de pintura con acabado profesional.</div>
+          <span class="card-tag">Reparación</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="card-img pulido">
+          <span class="card-icon">🔧</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Pulido y corrección</div>
+          <div class="card-desc">Eliminamos rayones, swirls y oxidaciones para restaurar la pintura original.</div>
+          <span class="card-tag">Restauración</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <div class="gallery-strip">
+    <div class="section-tag" style="margin-bottom:16px">Nuestros trabajos</div>
+    <div class="gallery-grid">
+      <div class="gallery-item main">Foto destacada</div>
+      <div class="gallery-item b">Trabajo 2</div>
+      <div class="gallery-item c">Trabajo 3</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div>
+      <div class="section-tag">Quiénes somos</div>
+      <h2 class="about-title">Pasión por <span>cada detalle</span></h2>
+      <p class="about-text">Somos un emprendimiento dedicado al cuidado y estética automotriz. Empezamos con la idea de ofrecer un servicio distinto, enfocado en los detalles y en la calidad del trabajo. Trabajamos cada vehículo como si fuera propio.</p>
+      <button class="btn-primary">Conocer más</button>
+    </div>
+    <div class="about-img">Foto del equipo / taller</div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">Autos Detaling</div>
+    <ul class="footer-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Galería</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+    <div class="footer-copy">© 2025 Autos Detaling</div>
+  </footer>
+
+</div>
+
+<!-- ANNOTATIONS -->
+<div class="annotations">
+  <div class="ann">
+    <div class="ann-title">Hero con imagen de fondo</div>
+    <div class="ann-desc">Sección principal con imagen del auto a pantalla completa, título grande y llamadas a la acción.</div>
+  </div>
+  <div class="ann">
+    <div class="ann-title">Sección de servicios</div>
+    <div class="ann-desc">3 cards con los servicios principales: Detailing, Chapa/Pintura y Pulido.</div>
+  </div>
+  <div class="ann">
+    <div class="ann-title">Galería + Nosotros</div>
+    <div class="ann-desc">Strip de fotos de trabajos realizados y sección breve de presentación del equipo.</div>
+  </div>
+</div>
+
+</body>
+</html>
