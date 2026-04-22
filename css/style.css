@@ -97,3 +97,8 @@ li:hover {
     margin-right: 4rem;
     padding: 2rem;
 }
+
+#logo
+{
+    border-radius: 50%;
+}
