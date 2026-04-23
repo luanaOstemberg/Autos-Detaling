@@ -1,13 +1,21 @@
+:root {
+    --negro: #091413;
+    --verde-bosque:#285a48;
+    --verde-medio:#408a71; 
+    --verde-clarito:#b0e4cc;
+
+}
 body {
     font-family: "Michroma", sans-serif;
     font-weight: 400;
     font-style: normal;
     margin: 0;
     padding: 0;
-    background-image: url(../img/fondo.jpg);
+    background-color: darkslateblue;
+    background-image: url(../img/fondoweb.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; 
     width: 100vw;
 }
 
@@ -17,7 +25,12 @@ body {
     font-style: normal;
     color: black;
 }
-
+#logo {
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
 h1 {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
