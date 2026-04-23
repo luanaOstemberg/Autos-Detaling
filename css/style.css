@@ -102,3 +102,24 @@ li:hover {
 {
     border-radius: 50%;
 }
+#descrip
+{
+  border:2px solid beige;  
+margin: 2px;
+padding: 2px;
+}
+#tarjeta
+{
+    border:2px solid beige;   
+margin: 0px;
+padding: 0px;
+}
+.formulario
+{
+   width: 50vw;
+   justify-self: center;
+}
+.form
+{
+   justify-self: center;
+}
