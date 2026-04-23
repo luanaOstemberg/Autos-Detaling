@@ -8,6 +8,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    width: 100vw;
 }
 
 #titulox {
@@ -134,4 +135,11 @@ li:hover {
 
 .form {
     justify-self: center;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .formulario {
+        width: 90vw;
+    }
 }
