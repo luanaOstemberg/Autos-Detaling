@@ -1,11 +1,20 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
     padding: 0;
     background-image: url(../img/fondo.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
+
+#titulox {
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
 }
 
 h1 {
@@ -36,7 +45,7 @@ nav {
     gap: 10px;
     padding: 0;
     margin: 5px;
-    
+
 }
 
 .align-items-start {
@@ -98,28 +107,31 @@ li:hover {
     padding: 2rem;
 }
 
-#logo
-{
+#logo {
     border-radius: 50%;
 }
-#descrip
-{
-  border:2px solid beige;  
-margin: 2px;
-padding: 2px;
+ 
+/*
+
+#descrip {  
+    border: 2px solid beige;
+    margin: 2px;
+    padding: 2px;
 }
-#tarjeta
-{
-    border:2px solid beige;   
-margin: 0px;
-padding: 0px;
+
+#tarjeta {
+    border: 2px solid beige;
+    margin: 0px;
+    padding: 0px;
 }
-.formulario
-{
-   width: 50vw;
-   justify-self: center;
+    
+ */
+
+.formulario {
+    width: 50vw;
+    justify-self: center;
 }
-.form
-{
-   justify-self: center;
+
+.form {
+    justify-self: center;
 }
