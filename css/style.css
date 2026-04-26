@@ -1,10 +1,18 @@
 :root {
     --negro: #091413;
-    --verde-bosque:#285a48;
-    --verde-medio:#408a71; 
-    --verde-clarito:#b0e4cc;
+    --verde-bosque: #285a48;
+    --verde-medio: #408a71;
+    --verde-clarito: #b0e4cc;
 
 }
+
+html {
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: "Michroma", sans-serif;
     font-weight: 400;
@@ -15,22 +23,31 @@ body {
     background-image: url(../img/fondoweb.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover; 
+    background-size: cover;
     width: 100vw;
+
 }
 
 #titulox {
     font-family: "Michroma", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: black;
+    color: var(--verde-clarito);
+    justify-self: center;
 }
+
+#ptit {
+    justify-self: center;
+    color: var(--verde-clarito);
+}
+
 #logo {
     font-family: "Michroma", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: black;
 }
+
 h1 {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -109,7 +126,10 @@ p {
         /* los alinea horizontalmente */
 }
 
-
+li>.col {
+    margin: 2px;
+    padding: 1px;
+}
 
 li:hover {
     transform: scale(1.05);
@@ -124,7 +144,7 @@ li:hover {
 #logo {
     border-radius: 50%;
 }
- 
+
 /*
 
 #descrip {  
@@ -148,10 +168,61 @@ li:hover {
 
 .form {
     justify-self: center;
+    width: 25vw;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+    background-color: var(--verde-bosque);
+    color: var(--verde-clarito);
 }
 
+.form>div {
+    margin: 5px;
+    padding: 5px;
+}
+
+#cardfondo>div {
+    background-color:
+        transparent;
+}
+
+#cardfondo {
+    border: 2px solid #408a71;
+    background-color:
+        rgba(0, 0, 0, 0);
+}
+
+.servicios {
+    background-color: transparent;
+}
+footer {
+    background-color: var(--verde-clarito);
+    color:var(--negro);
+}
+footer > ul {
+    display:flex;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+footer > ul > li {
+    margin: 5px;
+    padding: 5px;
+}
+i {
+  font-size: 24px;
+  margin: 5px;
+  color: #333;
+}
+
+.fa-whatsapp {
+  color: #25D366;
+}
+
+.fa-github {
+  color: black;
+}
 @media screen and (max-width: 768px) {
-    
+
     .formulario {
         width: 90vw;
     }

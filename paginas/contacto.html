@@ -23,10 +23,10 @@
             </div>
             <div class="col">
                 <ul class="row align-items-start">
-                    <li class="col"><a href="../index.html" type="button" class="btn btn-secondary">Home</a></li>
-                    <li class="col"><a href="servicios.html" type="button" class="btn btn-secondary">Servicios</a></li>
-                    <li class="col"><a href="galeria.html" type="button" class="btn btn-secondary">Galeria</a></li>
-                    <li class="col"><a href="contacto.html" type="button" class="btn btn-secondary">Contacto</a></li>
+                    <li class="col"><a href="../index.html" type="button" class="btn btn-success">Home</a></li>
+                    <li class="col"><a href="servicios.html" type="button" class="btn btn-success">Servicios</a></li>
+                    <li class="col"><a href="galeria.html" type="button" class="btn btn-success">Galeria</a></li>
+                    <li class="col"><a href="contacto.html" type="button" class="btn btn-success">Contacto</a></li>
                 </ul>
             </div>
         </nav>
@@ -38,31 +38,31 @@
             <div class="wrapper">
                 <div class="header" >
                     <h1 id="titulox">Hablemos.</h1>
-                    <p>Completá el formulario y te responderemos a la brevedad.</p>
+                    <p id="ptit">Completá el formulario y te responderemos a la brevedad.</p>
                 </div>
 
                 <div class="card form">
                     <div class="field">
-                        <label for="nombre">Nombre y Apellido</label>
+                        <label for="nombre">Nombre y Apellido</label> <br>
                         <input id="nombre" type="text" placeholder="Nombre Completo" />
                     </div>
 
                     <div class="field">
-                        <label for="telefono">Número de Teléfono</label>
+                        <label for="telefono">Número de Teléfono</label><br>
                         <input id="telefono" type="tel" placeholder="+54 9 11 1234-5678" />
                     </div>
 
                     <div class="field">
-                        <label for="email">Email</label>
+                        <label for="email">Email</label><br>
                         <input id="email" type="email" placeholder="email@ejemplo.com" />
                     </div>
 
                     <div class="field">
-                        <label for="comentarios"></label>
+                        <label for="comentarios"></label><br>
                         <textarea id="comentarios" placeholder="Comentarios..."></textarea>
                     </div>
 
-                    <button class="btn btn-outline-dark btn-sm" type="submit" onclick="enviarContacto()">Enviar mensaje</button>
+                    <button class="btn btn-success btn-sm" type="submit" onclick="enviarContacto()">Enviar mensaje</button>
                 </div>
             </div>
         </section>
