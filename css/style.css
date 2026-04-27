@@ -19,7 +19,11 @@ html {
     overflow-x: hidden;
     height: 100%;
 }
-
+#lista1
+{
+    margin: 5px;
+    padding: 5px;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -29,7 +33,7 @@ body {
     font-style: normal;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: var(--verde-bosque);
     background-image: url(../img/fondoweb.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
